@@ -76,7 +76,7 @@ const updateCurrentWeather = (data) => {
     convertEpochToTime(currentWeather.sunsetEpoch),
     currentWeather.windspeed,
     Math.floor(currentWeather.feelslike),
-    currentWeather.precip,
+    currentWeather.precipprob,
     currentWeather.visibility,
     currentWeather.humidity
   );

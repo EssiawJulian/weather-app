@@ -173,7 +173,7 @@ h1 {
 }
 
 .forecast-cards::-webkit-scrollbar-thumb {
-  background-color: darkolivegreen;
+  background-color: rgba(85, 107, 47, 0.26);
   border-radius: 10px;
 }
 

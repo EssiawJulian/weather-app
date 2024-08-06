@@ -25,7 +25,7 @@ const editCurrentWeatherInfoCards = (
   sunsetElement.textContent = sunset;
   windElement.textContent = wind + " mph";
   feelsLikeElement.textContent = changeTempToCelsiusOrFahrenheit(feelsLike) + "°";
-  precipitationElement.textContent = precipitation + " in";
+  precipitationElement.textContent = precipitation + " %";
   visibilityElement.textContent = visibility + " mi";
   humidityElement.textContent = humidity + "%";
 };
