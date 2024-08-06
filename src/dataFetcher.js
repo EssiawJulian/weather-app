@@ -17,10 +17,8 @@ async function response(location) {
     });
 
     if (!res.ok) {
-      console.log("1");
       return "City entered is not found";
     }
-    console.log("2");
     const data = await res.json();
 
     localStorage.setItem("location", location);
@@ -28,7 +26,6 @@ async function response(location) {
     updateCurrentWeather(data);
     loadHourlyDate(data);
     loadDailyDate(data);
-    console.log(data);
   } catch (error) {
     console.error("Something went wrong:", error.message);
     return "Something went wrong";
@@ -86,8 +83,6 @@ const updateCurrentWeather = (data) => {
     convertEpochToDate(currentWeather.datetimeEpoch)
   );
 
-  // Test -----------------------------------------
-  console.log(epochToHours(data.currentConditions.datetimeEpoch));
 };
 
 const loadHourlyDate = (data) => {
@@ -160,10 +155,6 @@ const epochToWeekDay = (epoch) => {
   return date.toLocaleDateString("en-US", {
     weekday: "short",
   });
-};
-
-const convertToCelsius = (temp) => {
-  return ((temp - 32) * 5) / 9;
 };
 
 export { addSearchListener, response, checkResponseResultAndAlert };

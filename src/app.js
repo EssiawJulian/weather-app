@@ -1,6 +1,6 @@
 import "./styles.css";
 import { addSearchListener, response, checkResponseResultAndAlert } from "./dataFetcher";
-import { autoFillLocation, toggleCelsiusFahrenheitButton, changeTempToCelsiusOrFahrenheit } from "./domEvents";
+import { autoFillLocation, toggleCelsiusFahrenheitButton } from "./domEvents";
 
 document.addEventListener("DOMContentLoaded", () => {
   addSearchListener();
