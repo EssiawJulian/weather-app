@@ -3,7 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WeatherWiz</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header>
+        <h1>WeatherWiz</h1>
+        <div class="search-container">
+          <input
+            type="search"
+            class="search-bar"
+            placeholder="Enter City/Country Ex. London (Select 'Enter') to search"
+            autocomplete="off"
+          />
+          <ul class="suggestions-list">
+            <!-- Suggestions will be added here -->
+          </ul>
+        </div>
+        <div class="temperature-toggle">
+          <button id="celsius">°C</button>
+          <button id="fahrenheit" class="active">°F</button>
+        </div>
+      </header>
+
+      <div class="location-date">
+        <h1 class="location">Location</h1>
+        <h2 class="date">Date</h2>
+      </div>
+
+      <section class="current-weather">
+        <!-- Current Weather Temp -->
+        <div class="current-weather-temp">
+          <div class="current-temp" data-temp>0&deg</div>
+          <div class="additional-info">
+            <p data-condition="">?</p>
+            <p data-temp-high-low>H: ? | L: ?</p>
+          </div>
+        </div>
+        <!-- Current Weather Details -->
+        <div class="weather-details">
+          <div class="weather-item">
+            <div class="weather-item-header">
+              <img
+                src='<%= require("./assets/img/sun-wireless-outline.svg") %>'
+                alt="2"
+              /><span>UV INDEX</span>
+            </div>
+            <h2 data-uv-index>#</h2>
+          </div>
+          <div class="weather-item">
+            <div class="weather-item-header">
+              <img
+                src='<%= require("./assets/img/weather-sunset-up.svg") %>'
+                alt="1"
+              /><span>Sunrise</span>
+            </div>
+            <h2 data-dew>#</h2>
+          </div>
+
+          <div class="weather-item">
+            <div class="weather-item-header">
+              <img
+                src='<%= require("./assets/img/weather-sunset-down.svg") %>'
+                alt="3"
+              /><span>SUNSET</span>
+            </div>
+            <h2 data-sunset>#</h2>
+          </div>
+          <div class="weather-item">
+            <div class="weather-item-header">
+              <img
+                src='<%= require("./assets/img/weather-windy.svg") %>'
+                alt="4"
+              /><span>WIND</span>
+            </div>
+            <h2 data-wind>#</h2>
+          </div>
+          <div class="weather-item">
+            <div class="weather-item-header">
+              <img
+                src='<%= require("./assets/img/thermometer-lines.svg") %>'
+                alt="5"
+              /><span>FEELS LIKE</span>
+            </div>
+            <h2 data-feels-like>#</h2>
+          </div>
+          <div class="weather-item">
+            <div class="weather-item-header">
+              <img
+                src='<%= require("./assets/img/water.svg") %>'
+                alt="6"
+              /><span>PRECIPITATION</span>
+            </div>
+            <h2 data-precipitation>#</h2>
+          </div>
+          <div class="weather-item">
+            <div class="weather-item-header">
+              <img src='<%= require("./assets/img/eye.svg") %>' alt="7" /><span
+                >VISIBILITY</span
+              >
+            </div>
+            <h2 data-visibility>#</h2>
+          </div>
+          <div class="weather-item">
+            <div class="weather-item-header">
+              <img
+                src='<%= require("./assets/img/water-percent.svg") %>'
+                alt="8"
+              /><span>HUMIDITY</span>
+            </div>
+            <h2 data-humidity="">#</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="hourly-forecast">
+        <h2>Hourly Forecast</h2>
+        <h5 data-description>LKJDLKDJLAKJLAKSJ</h5>
+        <div class="forecast-cards hourly-container">
+          <!-- Repeat forecast-card for each hour -->
+        </div>
+      </section>
+
+      <section class="daily-container">
+        <h2>
+          <div class="daily-forecast-header">
+            <img
+              src='<%= require("./assets/img/calendar-month.svg") %>'
+              alt="8"
+            /><span>15 - DAY FORECAST</span>
+          </div>
+        </h2>
+        <ul class="daily-forecast">
+          <!-- Repeat forecast-card for each day -->
+        </ul>
+      </section>
+    </div>
+  </body>
 </html>
