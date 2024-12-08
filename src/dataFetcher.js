@@ -6,9 +6,10 @@ import {
   loadDailyForecast,
 } from "./domEvents";
 
+
 async function response(location) {
   try {
-    const API_KEY = "HMYXKY73XNCYT7RFC5R73JWTR";
+    const API_KEY = process.env.API_KEY;
     const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${API_KEY}`;
     const res = await fetch(url, {
       headers: {
@@ -82,7 +83,6 @@ const updateCurrentWeather = (data) => {
     data.resolvedAddress,
     convertEpochToDate(currentWeather.datetimeEpoch)
   );
-
 };
 
 const loadHourlyDate = (data) => {
